@@ -20,9 +20,9 @@ export const RegistrationScreen = (props) => {
 	const [state, setState] = useState(initialState);
 
 	const submitForm = () => {
-		Keyboard.dismiss()
-		console.log(state)
-	}
+		Keyboard.dismiss();
+		console.log(state);
+	};
 	return (
 		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
 			<View style={styles.container}>
@@ -31,8 +31,8 @@ export const RegistrationScreen = (props) => {
 					source={require("../../assets/mountains-picture-BG.png")}>
 					<View style={styles.formBox}>
 						<View style={styles.avatar}>
-						<TouchableOpacity style={styles.addAvatarBtn} >
-								<Text >svg</Text>
+							<TouchableOpacity style={styles.addAvatarBtn}>
+								<Text>svg</Text>
 							</TouchableOpacity>
 						</View>
 						<Text style={styles.title}>Реєстрація</Text>
@@ -59,9 +59,9 @@ export const RegistrationScreen = (props) => {
 									onChangeText={(value) =>
 										setState((prevSate) => ({ ...prevSate, password: value }))
 									}></TextInput>
-									<TouchableOpacity style={styles.btnLook}>
+								<TouchableOpacity style={styles.btnLook}>
 									<Text>Показати</Text>
-									</TouchableOpacity>
+								</TouchableOpacity>
 							</View>
 							<TouchableOpacity style={styles.btnLoad} onPress={submitForm}>
 								<Text style={styles.btnLoadText}>Зареєстуватися</Text>
@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
 		left: "35%",
 		top: -60,
 	},
-	addAvatarBtn:{
-		paddingHorizontal:10,
+	addAvatarBtn: {
+		paddingHorizontal: 10,
 		paddingVertical: 1,
 		position: "absolute",
 		right: -10,
